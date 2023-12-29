@@ -1,0 +1,309 @@
+/* * GLOBAL */
+html {
+    font-family: sans-serif;
+    line-height: 1.15;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+body {
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    background-color: #fff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+
+/* * HEADER  */
+.diner__header {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 10;
+    padding-top: 30px;
+
+}
+
+.diner__nav {
+    background-color: transparent !important;
+
+}
+
+h1 a.navbar-brand {
+    margin: 0;
+    padding: 0;
+    font-size: 36px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.diner__header .form-inline .search__input {
+    padding: 10px 50px 10px 20px;
+    height: 45px;
+    font-size: 16px;
+    font-weight: 400;
+    border-radius: 6px;
+}
+
+.diner__header .form-inline {
+    position: relative;
+}
+
+.diner__header .form-inline .search__icon {
+    position: absolute;
+    right: 30px;
+    font-size: 15px;
+    top: 15px;
+    cursor: pointer;
+}
+
+/* * BANNER  */
+.diner__banner {
+    background-image: linear-gradient(to right, #ff6600, hsl(30deg 100% 1% / 20%)), url(../img/banner1.jpg);
+
+    background-size: cover;
+    position: relative;
+    padding: 150px;
+    background-attachment: fixed;
+}
+
+.diner__banner .card {
+    background-color: transparent;
+    color: white;
+    border: none;
+}
+
+.diner__banner .baner__text h3 {
+    font-size: 54px;
+    line-height: 64px;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: #fff;
+}
+
+.diner__banner .baner__text p {
+    font-size: 16px;
+    line-height: 28px;
+    color: #fff;
+    margin-top: 1.5rem;
+}
+
+.diner__banner .card-body {
+    padding: 0;
+    width: 100%;
+}
+
+.diner__banner .diner__button {
+    border: 2px solid white;
+    background-color: transparent;
+    padding: 12px 36px;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 3rem;
+    transition: 0.5s;
+}
+
+.diner__banner .diner__button:hover {
+    background: #fff;
+    border: 2px solid #fff;
+    color: #ff6600;
+}
+
+.diner__banner .diner__button i {
+    display: inline;
+    padding-left: 8px;
+    font-size: 16px;
+}
+
+/* * CONTENT */
+
+.content__first {
+    display: flex;
+    width: 80%;
+    margin: auto;
+    padding: 4rem 0 3rem;
+}
+
+.content__first .first__left {
+    width: 45%;
+    padding-right: 60px;
+    padding-left: 20px;
+}
+
+.first__left h2 {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 1px;
+    color: #ff6600;
+    display: block;
+    font-family: 'Pacifico', cursive;
+}
+
+.first__left h3 {
+    font-size: 38px;
+    line-height: 48px;
+    font-weight: 600;
+}
+
+.content__first .first__right {
+    width: 53%;
+    padding-left: 20px;
+    padding-right: 15px;
+}
+
+.first__right p {
+    font-size: 17px;
+    line-height: 28px;
+    color: rgba(22, 28, 45, 0.7);
+}
+
+.content__second {
+    display: flex;
+}
+
+.content__second .second__left::before {
+    content: "";
+    background: rgb(16 15 19 / 46%);
+    position: absolute;
+    top: 0;
+    min-height: 100%;
+    left: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.content__second .second__left {
+    width: 50%;
+    background: url(/img/banner3.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+    min-height: 600px;
+}
+
+.content__second .second__left,
+.content__second .second__right {
+    width: 50%;
+}
+
+.content__second .second__right {
+    background-color: #ff6600;
+}
+
+.second__right .right__info {
+    padding: 60px 80px;
+}
+
+.right__info h6 {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 1px;
+    display: block;
+    font-family: 'Pacifico', cursive;
+    color: #fff;
+}
+
+.right__info h3 {
+    font-size: 38px;
+    line-height: 48px;
+    font-weight: 600;
+}
+
+.right__info p {
+    color: #ffdfc9;
+    margin-top: 1rem;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+.right__info .right__subscribe {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 30px;
+    grid-gap: 30px;
+    margin-top: 3rem;
+}
+
+.right__subscribe .subscribe__block .icon {
+    background: #fff;
+    width: 70px;
+    height: 70px;
+    text-align: center;
+    line-height: 70px;
+    border-radius: 7%;
+    transition: 0.3s ease-in-out;
+}
+
+.right__subscribe .subscribe__block .icon i {
+    font-size: 25px;
+    color: #ff6600;
+}
+
+.right__subscribe .subscribe__block a {
+    display: block;
+    color: black;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 15px;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.right__subscribe .subscribe__block:hover .icon i {
+    color: #fcb900;
+    transition: 0.3s ease-in-out;
+}
+
+
+/* * SERVICES */
+.services__box {
+    padding: 40px 40px;
+    transition: all 0.5s ease 0s;
+    border-radius: 8px;
+    box-shadow: 0 25px 98px 0 rgba(0, 0, 0, 0.03);
+    background-color: #fff;
+    position: relative;
+    border: 1px solid #eee;
+}
+
+.services__box__title {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-gap: 30px;
+}
