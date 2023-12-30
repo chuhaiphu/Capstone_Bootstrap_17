@@ -148,7 +148,6 @@ h1 a.navbar-brand {
 }
 
 /* * CONTENT */
-
 .content__first {
     display: flex;
     width: 80%;
@@ -290,6 +289,84 @@ h1 a.navbar-brand {
     transition: 0.3s ease-in-out;
 }
 
+/* * CATEGORIES*/
+.categories{
+    background: #f7f7f7;
+}
+
+.categories .cate__title{
+    text-align: center;
+    padding-bottom: 1rem;
+}
+.categories .cate__title h6{
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 1px;
+    color: #f60;
+    display: block;
+    font-family: 'Pacifico', cursive;
+}
+.categories .cate__title h3{
+    font-size: 38px;
+    line-height: 48px;
+    font-weight: 600;
+}
+.categories .cate__menu .cate__text{
+    top: auto;
+    left: 10px;
+}
+.categories .cate__menu h4{
+    font-size: 22px;
+    line-height: 30px;
+    color: #fff;
+    font-weight: 700;
+}
+.categories .cate__menu h6{
+    font-weight: 600;
+    color: #e9b707;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+.categories .cate__menu a:hover{
+    text-decoration: none;
+}
+.cate__menu{
+    gap:30px 0;
+}
+.categories  .col-4 .image{
+    position: relative;
+}
+.categories  .col-4 .image::after{
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0.53) 69%, rgba(0, 0, 0, 0.76) 100%);
+    transition-duration: 300ms;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.7, 1, 0.7, 1);
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    content: " ";
+    position: absolute;
+}
+.categories  .col-4 .image::before{
+    background: linear-gradient(to top, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0.53) 100%, rgba(0, 0, 0, 0.76) 69% , ) ;
+    transition-duration: 300ms;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.7, 1, 0.7, 1);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    content: " ";
+    position: absolute;
+    cursor: pointer;
+}
+.categories  .col-4 .image:hover{
+    opacity: 0.85;
+    transition: all 0.4s;
+   
+}
 
 /* * SERVICES */
 .services__box {
@@ -301,9 +378,62 @@ h1 a.navbar-brand {
     position: relative;
     border: 1px solid #eee;
 }
+.services__box:hover{
+    box-shadow: 0 25px 98px 0 rgba(0, 0, 0, 0.1);
+}
+.services__box:hover .icon{
+    background-color: #ff6600;
+    transition: 0.3s ease-in-out;
+}
+.services__box:hover .icon span{
+    color: white;
+    transition: 0.3s ease-in-out;
+}
+
+.services__box p {
+    margin-bottom: 0;
+}
 
 .services__box__title {
     display: grid;
     grid-template-columns: auto 1fr;
     grid-gap: 30px;
+}
+
+.services__box .icon {
+    width: 70px;
+    height: 70px;
+    text-align: center;
+    background: rgba(135, 115, 252, 0.05);
+    line-height: 70px;
+    border-radius: 6px;
+}
+
+.services__box .icon span {
+    font-size: 25px;
+    line-height: 70px;
+    color: #ff6600;
+}
+
+.services__box__name p {
+    margin-bottom: 0;
+    font-size: 18px;
+    line-height: 28px;
+    color: rgba(22, 28, 45, 0.7);
+    font-family: 'Quicksand', sans-serif;
+}
+
+.services__box__name a {
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: 5px;
+    margin-bottom: 0px;
+    display: block;
+    color: black;
+}
+
+.services__box__name a:hover {
+    color: #ff6600;
+    transition: 0.5s all;
 }
