@@ -590,7 +590,8 @@ p.count-text {
 
 /* BLOG POSTS  */
 .blog{
-    background-color: #f7f7f7
+    background-color: #f7f7f7;
+    padding-bottom: 72px;
 }
 .blog__text{
     text-align: center;
