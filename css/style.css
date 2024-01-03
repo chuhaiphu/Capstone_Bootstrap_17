@@ -675,6 +675,7 @@ p.count-text {
 /* CMT  */
 .cmt{
     text-align: center;
+    padding: 96px 0;
 }
 .cmt .cmt__item img{
     width: 85px;
