@@ -371,6 +371,28 @@
         </div>
     </section>
 
+    <!-- * VIDEO POP-UP -->
+    <section class="diner__video" id="video">
+        <div class="new-block py-5">
+            <div class="container py-lg-5 HomePageVideoPopup">
+                <div class="video__background position-relative">
+                    <a href="#small-dialog" class="popup-with-zoom-anim play-view text-center pl-3">
+                        <span class="video-play-icon">
+                            <span class="fa fa-play"></span>
+                        </span>
+                    </a>
+                </div>
+
+                <!-- dialog itself, mfp-hide class is required to make dialog hidden -->
+                <div id="small-dialog" class="zoom-anim-dialog mfp-hide">
+                    <iframe src="https://player.vimeo.com/video/305185528" frameborder="0" allow="autoplay; fullscreen"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
     <!-- * BLOG -->
     <section class="blog">
         <div class="container">
@@ -379,7 +401,7 @@
                 <h3>Blog Posts</h3>
             </div>
             <div class="row ">
-                <div class="col-4">
+                <div class="col-lg-4 col-md-6 item mt-5">
                     <div class="card">
                         <div class="card__header">
                             <div class="card__img">
@@ -411,7 +433,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-4">
+                <div class="col-lg-4 col-md-6 item mt-5">
                     <div class="card">
                         <div class="card__header">
                             <div class="card__img">
@@ -443,7 +465,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-4">
+                <div class="col-lg-4 col-md-6 item mt-5">
                     <div class="card">
                         <div class="card__header">
                             <div class="card__img">
@@ -667,6 +689,45 @@
                         items: 1 //số lượng item khi ở màn hình >= 600px
                     }
                 }
+            });
+        });
+    </script>
+
+    <!-- Magnific Popup core JS file -->
+    <script
+        src="js/jquery.magnific-popup.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.popup-with-zoom-anim').magnificPopup({
+                type: 'inline',
+
+                fixedContentPos: false,
+                fixedBgPos: true,
+
+                overflowY: 'auto',
+
+                closeBtnInside: true,
+                preloader: false,
+
+                midClick: true,
+                removalDelay: 300,
+                mainClass: 'my-mfp-zoom-in'
+            });
+
+            $('.popup-with-move-anim').magnificPopup({
+                type: 'inline',
+
+                fixedContentPos: false,
+                fixedBgPos: true,
+
+                overflowY: 'auto',
+
+                closeBtnInside: true,
+                preloader: false,
+
+                midClick: true,
+                removalDelay: 300,
+                mainClass: 'my-mfp-slide-bottom'
             });
         });
     </script>
