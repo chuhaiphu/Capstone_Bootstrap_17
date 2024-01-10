@@ -854,6 +854,12 @@ p.count-text {
 .copyright a:hover{
     color: #fff;
 }
+@media screen and (max-width: 992px) {
+    /* điều kiện hiển thị code CSS: ở vùng màn hình nhỏ hơn hoặc bằng 992px */
+    .copyright .copy{
+        text-align: center;
+        }
+    }
 
 
 /* BACK_TO_TOP */
