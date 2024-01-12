@@ -188,8 +188,9 @@ button#trigger-overlay{
     background-image: linear-gradient(to right, #ff6600, hsl(30deg 100% 1% / 20%)), url(../img/banner1.jpg);
 
     background-size: cover;
+    background-position: center;
     position: relative;
-    padding: 150px;
+    padding: 150px 0;  
     background-attachment: fixed;
 }
 
@@ -239,6 +240,36 @@ button#trigger-overlay{
     display: inline;
     padding-left: 8px;
     font-size: 16px;
+}
+
+@media screen and (max-width: 1190px) {
+    .diner__banner .baner__text h3{
+        font-size: 48px;
+        line-height: 58px;
+    }   
+}
+@media screen and (max-width: 992px) {
+    .diner__banner .baner__text h3{
+        font-size: 44px;
+        line-height: 53px;
+    }   
+}
+@media screen and (max-width: 800px) {
+    .diner__banner .baner__text h3{
+        font-size: 40px;
+        line-height: 50px;
+    }   
+}
+@media screen and (max-width: 480px) {
+    .diner__banner .baner__text h3{
+        font-size: 28px;
+        line-height: 38px;
+    }   
+}
+@media screen and (max-width: 600px) {
+    #search{
+        display: none;
+    }   
 }
 
 /* * CONTENT */
@@ -987,12 +1018,20 @@ p.count-text {
 
 
 @media screen and (max-width:992px) {
+<<<<<<< HEAD
+    .footer__icon{
+        text-align: center;
+    }
+    
+}
+=======
     .footer__icon {
         text-align: center;
     }
 
 }
 
+>>>>>>> ffd716ab2a4ff5351e0e8c5e5d050262243aede0
 /* COPYRIGHT */
 .copyright {
     border-top: 1px solid rgb(255 255 255 / 5%);
@@ -1015,6 +1054,12 @@ p.count-text {
 .copyright a:hover {
     color: #fff;
 }
+@media screen and (max-width: 992px) {
+    /* điều kiện hiển thị code CSS: ở vùng màn hình nhỏ hơn hoặc bằng 992px */
+    .copyright .copy{
+        text-align: center;
+        }
+    }
 
 @media screen and (max-width: 992px) {
 
