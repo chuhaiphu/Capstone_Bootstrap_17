@@ -276,7 +276,7 @@ button#trigger-overlay{
 }
 
 .content__second .second__left {
-    background: url(/img/banner3.jpg);
+    background: url(../img/banner3.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -522,7 +522,7 @@ button#trigger-overlay{
 
 /* * INTRO */
 .diner__carousel {
-    background: url(/img/banner2.jpg);
+    background: url(../img/banner2.jpg);
     background-repeat: no-repeat, no-repeat, no-repeat;
     background-position: center;
     background-size: cover;
