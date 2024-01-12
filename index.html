@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
         integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 
-    <!-- OWL CAROSEL  -->
+    <!-- ? OWL CAROSEL  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
         integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -27,6 +27,9 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
         integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- ? ANIMATE CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
     <!-- ? MAIN CSS -->
     <link rel="stylesheet" href="./css/style.css">
@@ -36,18 +39,55 @@
     <!-- * HEADER -->
     <header class="diner__header">
         <div class="container ">
-            <nav class="diner__nav navbar">
+            <nav class="diner__nav navbar pl-0">
                 <h1>
                     <a class="navbar-brand" href="#">Diner</a>
                 </h1>
-                <form class="form-inline">
-                    <input class="search__input form-control mr-sm-2" type="search" placeholder="Search here...  "
-                        aria-label="Search">
-                    <span>
-                        <i class="search__icon fa fa-search"></i>
-                    </span>
-                </form>
+                <div class="header__right-content">
+                    <form class="form-inline d-none d-sm-inline">
+                        <input class="search__input form-control mr-sm-2" type="search" placeholder="Search here...  "
+                            aria-label="Search">
+                        <span>
+                            <i class="search__icon fa fa-search"></i>
+                        </span>
+                    </form>
+                    <div class="mobile-nav-button text-center">
+                        <button id="trigger-overlay" type="button"><i class="fa fa-bars"
+                                aria-hidden="true"></i></button>
+                    </div>
+                </div>
             </nav>
+            <div id="overlay__navbar" class="overlay overlay-scale">
+                <button type="button" class="overlay-close"><i class="fa fa-times"></i></button>
+                <nav class="menu-header-menu-container">
+                    <ul id="dropdown-menu" class="">
+                        <li class="dropdown-item">
+                            <a href="https://wp.w3layouts.com/diner/" aria-current="page">Home</a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a href="https://wp.w3layouts.com/diner/about-page/">About</a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a href="https://wp.w3layouts.com/diner/services-page/">Services</a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a href="https://wp.w3layouts.com/diner/blog-posts/">Blog Posts</a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a href="https://wp.w3layouts.com/diner/404-page/">404 page</a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a href="https://wp.w3layouts.com/diner/elements-page/">Elements</a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a href="https://wp.w3layouts.com/diner/contact-page/">Contact</a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a href="https://wp.w3layouts.com/diner/single-landing-page/">Landing page</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
         </div>
     </header>
 
@@ -739,7 +779,17 @@
             });
         });
     </script>
+    <script>
+        document.getElementById("trigger-overlay").addEventListener("click", function () {
+            var overlay = document.getElementById("overlay__navbar");
+            overlay.classList.toggle("overlay-visible");
+        });
 
+        document.querySelector(".overlay-close").addEventListener("click", function () {
+            var overlay = document.getElementById("overlay__navbar");
+            overlay.classList.toggle("overlay-visible");
+        });
+    </script>
 </body>
 
 </html>
