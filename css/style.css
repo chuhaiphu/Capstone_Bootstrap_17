@@ -1010,7 +1010,7 @@ p.count-text {
     max-width: 700px;
     margin: auto;
 }
-.dark .cmt h3,p  {
+.dark .cmt h3, .dark .cmt p  {
     color: white;
 }
 .dark .cmt .cmt__text{
