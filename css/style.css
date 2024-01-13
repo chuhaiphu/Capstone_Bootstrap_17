@@ -499,6 +499,8 @@ button#trigger-overlay{
 
 .diner__categories .cate__menu a:hover {
     text-decoration: none;
+    opacity: 0.85;
+    transition: all .4s;
 }
 
 .cate__menu {
