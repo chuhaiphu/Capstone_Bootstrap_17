@@ -1126,10 +1126,13 @@ p.count-text {
 .dark .footer__icon a{
     background-color:#232220 ;
 }
-.dark  .inputemail{
+.dark .inputemail{
     background-color: #232220 ;
+    color: white;
 }
-
+.dark .inputemail::placeholder{
+    color: white;
+}
 @media screen and (max-width:992px) {
     .footer__icon {
         text-align: center;
@@ -1371,7 +1374,6 @@ screen and (max-height: 300px) {
     z-index: 1043;
     position: fixed;
     outline: none !important;
-    -webkit-backface-visibility: hidden;
 }
 
 .mfp-container {
@@ -1480,7 +1482,6 @@ button.mfp-arrow {
     overflow: visible;
     cursor: pointer;
     border: 0;
-    -webkit-appearance: none;
     display: block;
     outline: none;
     padding: 0;
