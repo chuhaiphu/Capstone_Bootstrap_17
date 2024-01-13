@@ -37,7 +37,7 @@ h5,
 h6 {
     margin-top: 0;
     margin-bottom: 0.5rem;
-}
+} 
 
 p {
     margin-top: 0;
@@ -58,7 +58,6 @@ p {
 
 .diner__nav {
     background-color: transparent !important;
-
 }
 
 h1 a.navbar-brand {
@@ -69,12 +68,28 @@ h1 a.navbar-brand {
     color: #fff;
 }
 
+.header__right-content {
+    display: flex;
+    align-items: center;
+}
+
+button#trigger-overlay{
+    outline: none;
+    border: none;
+    background: none;
+    text-align: center;
+    color: #fbfdfb;
+    font-size: 1.95em;
+    padding: 0 8px;
+}
+
 .diner__header .form-inline .search__input {
     padding: 10px 50px 10px 20px;
     height: 45px;
     font-size: 16px;
     font-weight: 400;
     border-radius: 6px;
+    border: none;
 }
 
 .diner__header .form-inline {
@@ -89,13 +104,151 @@ h1 a.navbar-brand {
     cursor: pointer;
 }
 
+.overlay-scale {
+    opacity: 1;
+    transform: scale(1);
+    transition: transform 0.4s, opacity 0.4s;
+}
+
+/* Effects */
+.overlay-scale {
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(0.9);
+    transition: transform 0.2s, opacity 0.2s, visibility 0s 0.2s;
+}
+
+.overlay-visible {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+    transition: transform 0.4s, opacity 0.4s;
+}
+
+.overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    top: 0;
+    left: 0;
+    background: rgb(6 3 0 / 77%);
+    z-index: 99999;
+}
+
+.overlay ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    display: inline-block;
+    height: 100%;
+    position: relative;
+}
+
+.overlay nav {
+    text-align: center;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.overlay ul li a {
+    font-size: 20px;
+    font-weight: 600;
+    display: block;
+    color: #fff;
+    transition: color 0.2s;
+    padding: 4px;
+}
+
+.overlay .overlay-close {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: 40px;
+    top: 40px;
+    overflow: hidden;
+    border: none;
+    background: #ff6600;
+    color: #fff;
+    border-radius: 6px;
+}
+
+.overlay ul li a:hover {
+    color: #ff6600;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.dropdown-item:hover {
+    background-color: transparent;
+}
+
+/* Light theme */
+#myBody {
+    background-color: white;
+  }
+  #switchButton {
+    background-color: transparent;
+    color:white;
+    font-size: 20px;
+  }
+  #switchButton .fa-sun {
+    display: none;
+  }
+  #switchButton .fa-moon {
+    display: block;
+  }
+  
+  /* Dark Theme*/
+  .dark#myBody {
+    background-color: #232220;
+  }
+  .dark #switchButton {
+    background-color: transparent;
+    color:white;
+    font-size: 20px;
+  }
+  .dark #switchButton .fa-sun {
+    display: block;
+    color: white;
+  }
+  .dark .dinner__content .first__right p{
+    color: white
+  }
+  .dark .dinner__content .first__left h3{
+    color: white
+  }
+  .dark .right__info{
+    color: white
+  }
+  .dark .right__info .subscribe__block a{
+    color: white
+  }
+  .dark .search__icon{
+    color: #404040;
+  }
+  
+  
+  .dark #switchButton .fa-moon {
+    display: none;
+  }
+  .dark .search__input {
+    background-color: #232220;
+    color: white;
+    border: 1px solid white;
+  }
+
+  
+
 /* * BANNER  */
 .diner__banner {
     background-image: linear-gradient(to right, #ff6600, hsl(30deg 100% 1% / 20%)), url(../img/banner1.jpg);
 
     background-size: cover;
+    background-position: center;
     position: relative;
-    padding: 150px;
+    padding: 150px 0;  
     background-attachment: fixed;
 }
 
@@ -146,6 +299,39 @@ h1 a.navbar-brand {
     padding-left: 8px;
     font-size: 16px;
 }
+.dinner__content .py-md-5{
+    padding-bottom: 0!important;
+}
+
+@media screen and (max-width: 1190px) {
+    .diner__banner .baner__text h3{
+        font-size: 48px;
+        line-height: 58px;
+    }   
+}
+@media screen and (max-width: 992px) {
+    .diner__banner .baner__text h3{
+        font-size: 44px;
+        line-height: 53px;
+    }   
+}
+@media screen and (max-width: 800px) {
+    .diner__banner .baner__text h3{
+        font-size: 40px;
+        line-height: 50px;
+    }   
+}
+@media screen and (max-width: 480px) {
+    .diner__banner .baner__text h3{
+        font-size: 28px;
+        line-height: 38px;
+    }   
+}
+@media screen and (max-width: 600px) {
+    #search{
+        display: none;
+    }   
+}
 
 /* * CONTENT */
 .first__left h2 {
@@ -182,7 +368,7 @@ h1 a.navbar-brand {
 }
 
 .content__second .second__left {
-    background: url(/img/banner3.jpg);
+    background: url(../img/banner3.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -258,6 +444,12 @@ h1 a.navbar-brand {
 .right__subscribe .subscribe__block:hover .icon i {
     color: #fcb900;
     transition: 0.3s ease-in-out;
+}
+.dark .diner__categories{
+    background-color:#282828 ;
+}
+.dark .cate__title h3{
+    color: white;
 }
 
 /* * CATEGORIES*/
@@ -424,11 +616,21 @@ h1 a.navbar-brand {
     color: #ff6600;
     transition: 0.5s all;
 }
-
+.dark .services__box {
+    background-color: #282828;
+    color: white;
+    border:1px solid #ffffff1a;
+}
+.dark .services__box p{
+    color: white;
+}
+.dark .services__box a{
+    color: white;
+}
 
 /* * INTRO */
 .diner__carousel {
-    background: url(/img/banner2.jpg);
+    background: url(../img/banner2.jpg);
     background-repeat: no-repeat, no-repeat, no-repeat;
     background-position: center;
     background-size: cover;
@@ -561,6 +763,16 @@ p.count-text {
     margin-bottom: 0;
 }
 
+.dark .stats__box {
+    background-color: #232220;
+   
+}
+.dark .stats__box p{
+    color: white;
+}
+.dark .stats__box .counter{
+    color: white;
+}
 /* * VIDEO POP-UP */
 .video__background {
     background: url(https://wp.w3layouts.com/diner/wp-content/themes/Diner/assets/images/banner3.jpg);
@@ -715,6 +927,15 @@ p.count-text {
     padding-right: 0;
 }
 
+.dark .blog{
+    background-color: #282828;
+}
+.dark .blog h3{
+    color: white;
+}
+.dark .blog .card__bottom a{
+    color: white;
+}
 /* * CMT  */
 .cmt {
     text-align: center;
@@ -788,6 +1009,15 @@ p.count-text {
 .cmt__content {
     max-width: 700px;
     margin: auto;
+}
+.dark .cmt h3,p  {
+    color: white;
+}
+.dark .cmt .cmt__text{
+    color: white;
+}
+.dark .cmt q{
+    color: white;
 }
 
 
@@ -891,16 +1121,23 @@ p.count-text {
     opacity: 0.8;
 }
 
+.dark .footer__icon a{
+    background-color:#232220 ;
+}
+.dark  .inputemail{
+    background-color: #232220 ;
+}
 
 @media screen and (max-width:992px) {
-    .footer__icon{
+    .footer__icon {
         text-align: center;
     }
-    
+
 }
+
 /* COPYRIGHT */
-.copyright{
-    border-top:1px solid rgb(255 255 255 / 5%) ;
+.copyright {
+    border-top: 1px solid rgb(255 255 255 / 5%);
     padding: 1.2em 0;
     background: #000;
 }
@@ -927,6 +1164,14 @@ p.count-text {
         }
     }
 
+@media screen and (max-width: 992px) {
+
+    /* điều kiện hiển thị code CSS: ở vùng màn hình nhỏ hơn hoặc bằng 992px */
+    .copyright .copy {
+        text-align: center;
+    }
+}
+
 
 /* * BACK_TO_TOP */
 .back-to-top {
@@ -943,7 +1188,7 @@ p.count-text {
     line-height: 50px;
     text-align: center;
     border-radius: 50%;
-
+    z-index: 100;
     /* ẩn nút để thư viện cho hiện ra  */
     opacity: 0;
 }
@@ -973,20 +1218,45 @@ p.count-text {
         margin-top: 0px;
     }
 }
+
 @media screen and (max-width: 1200px) {
-    .carousel__banner .carousel__content{
+    .carousel__banner .carousel__content {
         padding-left: 6rem;
         padding-right: 6rem;
     }
 }
 
 @media screen and (max-width: 768px) {
-    .carousel__banner .carousel__content{
+    .carousel__banner .carousel__content {
         padding-left: 0rem;
         padding-right: 0rem;
     }
-    .carousel__content .carousel__title{
+
+    .carousel__content .carousel__title {
         font-size: 35px;
+    }
+}
+
+/* * RESPONSIVE FOR NAVBAR DROPDOWN - OVERLAY */
+@media screen and (max-height: 30.5em) {
+    .overlay nav {
+        font-size: 34px;
+    }
+
+    .overlay ul li {
+        line-height: 1.2em;
+    }
+}
+
+@media (max-width:767px) {
+    .overlay ul li a {
+        font-size: 16px;
+    }
+}
+
+@media (max-width:600px) {
+    .overlay ul li a {
+        font-size: 16px;
     }
 }
 
